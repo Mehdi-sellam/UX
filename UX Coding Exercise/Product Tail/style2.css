@@ -1,0 +1,230 @@
+/*== AUTH: MEHDI SELLAM ==*/
+
+
+/*==================== Global reset ====================================*/
+
+
+body{
+    background-color: rgb(231, 229, 229);
+}
+
+
+
+*{
+    font-family: sans-serif;
+}
+
+
+
+/*==================== PRODUCT HEADER ====================================*/
+
+
+/* Styles for the div with class product-headers */
+.product-headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    margin-left: 1em;
+    width: 100%; 
+}
+
+/* Style for the h1 element */
+.product-headers h1 {
+    flex: 1; 
+    font-weight: bold; 
+    margin: 0;
+}
+
+.product-headers h1 p {
+    font-size: smaller;
+    font-weight: 400;
+    margin: 0;
+    color: rgb(88, 86, 86);
+}
+
+/* Style for the h3 element */
+.product-headers h3 {
+    flex-shrink: 1;
+    margin: 0;
+    text-align: right; 
+    font-size: 45px;
+    color: #395e86;
+    padding-right: 30px;
+}
+
+
+
+/*==================== PRODUCT CONTAINER ====================================*/
+
+
+
+/* Outer Container */
+.outer-container {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    margin: 0 auto;
+    padding-top: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+@media (max-width: 768px) {
+    .outer-container {
+        width: 100%; 
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+
+/* Product Container */
+.product-container {
+    padding: 10px; 
+    background-color: #f9f9f9;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 13px 15px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding-left: 0%;
+    margin-left: 0%;
+    padding-right: 0%;
+    margin-right: 0%;
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        padding: 8px;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+
+
+/*==================== IMAGES CONTAINER ====================================*/
+
+
+/* Image Tile Container */
+.image-tile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+/* Main Image */
+.main-image {
+    width: 70%;
+    height: 505px;
+    object-fit: cover;
+    border-radius: 1px;
+    margin: 0;
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Media query for small screens (e.g., phones) */
+@media (max-width: 540px) {
+    .image-tile {
+        flex-direction: column; 
+    }
+
+    .thumbnails {
+        width: 100%; 
+        margin-top: 10px;
+
+    }
+}
+
+
+
+.thumbnail {
+    width: 100%;
+    height: 160.11px;
+    cursor: pointer;
+    border-radius: 1px;
+    transition: border 0.1s;
+    margin: 0;
+    object-fit: cover;
+    border: 0.5px solid transparent; 
+}
+
+.thumbnail:hover {
+    border: 1px solid black;
+}
+
+
+
+
+/*==================== UNDER-TAIL STYLE ====================================*/
+
+
+/* Styling for the under-tail container */
+.under-tail {
+    background-color: rgb(63, 62, 62);
+    font-size: 30px;
+    color: #f9f9f9;
+    padding-left: 15px;
+}
+
+/* Style for the icon and text span */
+.under-tail span {
+    display: flex;
+    align-items: center;
+}
+
+.under-tail i {
+    margin-right: 8px;/
+}
+
+
+
+
+/*==================== UNDR-UNDER-TAIL STYLE ====================================*/
+
+
+/* Style for under-under-tail container */
+.under-under-tail {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 40px 50px;
+}
+
+/* Style for icon and text pairs */
+.under-under-tail span {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for icons */
+.under-under-tail i {
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+/* Style for text */
+.under-under-tail p {
+    margin: 0;
+    font-size: 30px;
+    font-family: sans-serif;
+}

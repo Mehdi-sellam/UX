@@ -1,0 +1,367 @@
+/*== AUTH: MEHDI SELLAM ==*/
+
+
+/*==================== Global reset ====================================*/
+
+
+body{
+    background-color: rgb(231, 229, 229);
+}
+
+
+
+*{
+    font-family: sans-serif;
+}
+
+
+
+/*==================== NAV BAR ====================================*/
+
+
+nav{
+    background: rgb(206, 205, 205);
+    height: 90px;
+    width: auto;
+    border-radius: 5px;
+}
+label.logo{
+    color: #ffff;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 22px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 63px;
+    margin: auto;
+}
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    background: #ffff;
+    transition: .1s;
+    color: black;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 1190px){
+.checkbtn{
+    display: block;
+}
+ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -110%;
+    text-align: center;
+    transition: all .5s;
+}
+nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a{
+    font-size: 20px;
+}
+a:hover,a.active{
+    background: none;
+    color: #0082e6;
+}
+#check:checked ~ ul{
+    left: 0;
+}
+}
+
+
+
+
+/*==================== PRODUCT GRID ====================================*/
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
+    grid-template-rows: repeat(2, auto); /* Two rows with automatic height */
+    row-gap: 3.7em;
+    column-gap: 30px;
+    
+}
+
+
+@media (max-width: 1610px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 652px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+/*==================== PRODUCT HEADER ====================================*/
+
+
+
+/* Styles for the div with class product-headers */
+.product-headers {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    margin-left: 1em;
+    width: 100%;
+}
+
+/* Style for the h1 element */
+.product-headers h1 {
+    flex: 1; /* Allow the h1 to take up the available space */
+    font-weight: bold;
+    margin: 0;
+    font-size: 30px;
+}
+
+/* Style for the paragraph inside the h1 element (2L SE Tech eD4) */
+.product-headers h1 p {
+    font-size: smaller;
+    font-weight: 400; /* The normal font weight (400) */
+    margin: 0; 
+    color: rgb(88, 86, 86);
+}
+
+/* Style for the h3 element */
+.product-headers h3 {
+    flex-shrink: 1; /* Allow the h3 to shrink if necessary */
+    margin: 0;
+    text-align: right;
+    font-size: 38px;
+    color: #395e86;
+    padding-right: 24px;
+}
+
+
+
+
+/*==================== PRODUCT CONTAINER ====================================*/
+
+
+/* Outer Container */
+.outer-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 95%; /* Set initial width of the container */
+    margin: 0; /* Center the container horizontally */
+    padding-top: 3em; /* Add padding around the container */
+    padding-bottom: 3em;
+    margin: auto;
+}
+
+
+
+/* Product Container */
+.product-container {
+    background-color: #f9f9f9; /* Set background color */
+    width: 95%; /* Make each product container take up full width */
+    margin-bottom: 20px; /* Add space between each product container */
+    box-shadow: 13px 15px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding-left: 0%;
+    margin-left: 0%;
+    padding-right: 0%;
+    margin-right: 0%;
+    margin: auto;
+
+}
+
+
+
+
+
+
+/*==================== IMAGES CONTAINER ====================================*/
+
+
+/* Image Tile Container */
+.image-tile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+/* Main Image */
+.main-image {
+    width: 70%; /* Adjust the width to allow space for thumbnails */
+    height: 300px; /* Adjust height to match the increased combined height of thumbnails */
+    object-fit: cover;
+    border-radius: 1px;
+    margin: 0;
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%; /* Width for larger screens */
+    padding: 0;
+    margin: 0;
+}
+
+
+@media (max-width: 845px) {
+
+    .image-tile {
+        flex-direction: column;
+    }
+
+    
+    .thumbnails {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+
+.thumbnail {
+    width: 100%;
+    height: 91.41px;
+    cursor: pointer;
+    border-radius: 1px;
+    transition: border 0.1s;
+    margin: 0;
+    object-fit: cover;
+    border: 0.5px solid transparent;
+}
+
+.thumbnail:hover {
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+/*==================== UNDER-TAIL STYLE ====================================*/
+
+
+
+/* Styling for the under-tail container */
+.under-tail {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(63, 62, 62);
+    
+    font-size: 30px;
+    color: #f9f9f9;
+    padding: 10px 20px;
+}
+
+/* Style for the icon and text span */
+.under-tail span {
+    display: flex;
+    align-items: center;
+}
+
+/* Adjust spacing around the icon */
+.under-tail i {
+    margin-right: 8px;
+}
+
+
+.under-tail p {
+    margin: 0; 
+    max-width: calc(100% - 20px); 
+}
+
+
+
+
+
+
+/*==================== UNDR-UNDER-TAIL STYLE ====================================*/
+
+
+
+/* Style for under-under-tail container */
+.under-under-tail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+/* Style for icon and text pairs */
+.under-under-tail span {
+    display: flex;
+    align-items: center;
+}
+
+/* Style for icons */
+.under-under-tail i {
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+/* Style for text */
+.under-under-tail p {
+    margin: 0;
+    font-size: 21px;
+}
+
+
+
+/*==================== FOOTER STYLE ====================================*/
+
+
+
+.footer {
+    background-color: rgb(180, 179, 179);
+    color: #000;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 35px;
+}
