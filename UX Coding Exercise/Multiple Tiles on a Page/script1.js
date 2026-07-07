@@ -9,7 +9,10 @@ productContainers.forEach(productContainer => {
     // Add click event listener to each thumbnail
     thumbnails.forEach(thumbnail => {
         thumbnail.addEventListener('click', () => {
+            // Swap the images
+            const tempSrc = mainImage.src;
             mainImage.src = thumbnail.src;
+            thumbnail.src = tempSrc;
         });
     });
 });
